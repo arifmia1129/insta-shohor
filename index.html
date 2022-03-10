@@ -60,9 +60,9 @@
         <section class="my-5">
             <div id="first-quention">
                 <h3>প্রশ্ন : জাভাস্ক্রিপ্ট কিভাবে কাজ করে?</h3>
-                <p>উত্তর : Javascript হচ্ছে high level, interpreted, Client-side Scripting programming language. মূলত এই
+                <p>উত্তর : Javascript হচ্ছে high level, interpreted, Client-side Scripting programming language। মূলত এই
                     বিষয় গুলো বর্ণনা করলে এর কাজ সম্পর্কে জানা যাবে। interpreted মানে বুঝায় যে এটি এমন প্রোগ্রামিং
-                    ‍ল্যাংগুয়েজ যা line by line code execute করে। Javascript serially একটি পর একটি কোড সম্পাদন করে থাকে।
+                    ‍ল্যাংগুয়েজ যা line by line code execute করে।
                     উদাহরণ হিসাবে বলা যায়, console.log("Programming"), console.log("Hero") এই লাইন এর আউটপুট হলে প্রথমে,
                     Programming, পরবর্তী Hero। Step of interpreted language : language - Ready to run - Virtual Machine
                     - Machine code। আবার Client side scripting language বলতে বুঝায় javascript ইন্টারনেটের
@@ -70,19 +70,31 @@
                     V8 engine এর ভিতরে just in time compiler থাকে যার মাধ্যমে javascript কোড রান হয়।
                     v8 engine এর মাধ্যমে javascript code run হওয়ার ধাপ গুলো প্রথমে source code কে parse করে abstract
                     syntax tree এবং পর্যায়ক্রমে interpreted Ignition - Compiler turbofan - Bytecode - Optimized Machine
-                    Code। জাভাস্ক্রিপ্ট এর পুরো কার্যক্রম কে javascript event loop বলে। যা পরবর্তীতে আলোচনা করা হবে।
+                    Code।
                 </p>
             </div>
             <div id="second-quention">
                 <h3>প্রশ্ন : জাভাস্ক্রিপ্ট এর event loop কি কাজ করে?</h3>
-                <p>উত্তর : জাভাস্ক্রিপ্ট এর পুরো কার্যক্রম কে event loop বলা হয়। আমরা ইতিমধ্যে জানি যে javascript
-                    সিরিয়ালি কাজ করে। তবে এর ভিন্নতা মাঝেমাঝে পরীলক্ষিত হয়। অর্থাৎ যদিও javascript কোড সিরিয়ালি চেক করে
+                <p>উত্তর : জাভাস্ক্রিপ্ট এর পুরো কার্যক্রম কে event loop বলা হয়। javascript কোড সিরিয়ালি চেক করে
                     তবে সবসময় রেজাল্ট সিরিয়ালি নাও দিতে পারে। event loop এর পুরো কার্যক্রম এমন - javascript code লাইন
-                    বাই লাইন execute এর সময় কিছু কোড সাথে সাথে execute হয় এবং সাথেসাথে রেজাল্ট পাওয়া যায়। এদের কে stack
-                    বলা হয়। আবার অনেকক্ষেত্রে javascript কোন কোড কে চেক করে তা web apis এর কাছে দিয়ে দেয়। অর্থাৎ এর
-                    ফলাফল সাথেসাথে পাওয়া যায় না। যেমন : fetch, settimeOut ইত্যাদি। web apis থেকে প্রাপ্ত ফলাফল callback
+                    বাই লাইন execute এর সময় কিছু কোড সাথে সাথে execute হয় এবং সাথেসাথে রেজাল্ট পাওয়া যায় এদের কে stack
+                    বলা হয়। আবার অনেকক্ষেত্রে javascript কোন কোড কে চেক করে তা web apis এর কাছে দিয়ে দেয় অর্থাৎ এর
+                    ফলাফল সাথেসাথে পাওয়া যায় না যেমন : fetch, settimeOut ইত্যাদি। web apis থেকে প্রাপ্ত ফলাফল callback
                     queue তে গিয়ে জমা হয়। অর্থাৎ যেসব কোড এর ফলাফল সাথে সাথে পাওয়া যায় না তাদের queue বলে। javascript
-                    হচ্ছে single threted language। অর্থাৎ এটি একক সময় হয় stack execute করে নতুবা queue।
+                    হচ্ছে single threted language অর্থাৎ এটি একক সময় হয় stack execute করে নতুবা queue।
+                </p>
+            </div>
+            <div id="third-quention">
+                <h3>প্রশ্ন : local storage এবং session storage এর মধ্যে পার্থক্য।</h3>
+                <p>উত্তর :
+                    Session storage : এটি এমন একটি storage যা ওয়েবসাইট সম্পর্কে এমন সব তথ্য জমা রাখে যা ক্ষনস্থায়ী।
+                    অর্থাৎ এই storage ঐ তথ্য থাকে যা ওয়েবসাইট reload করলে মুছে যায়। প্রত্যেকটি tab এর জন্য আলাদা আলাদা
+                    session storage তৈরি হয়।
+
+                    Local storage : এটি এমন একটি storage যা ওয়েবসাইট সম্পর্কে এমন সব তথ্য জমা রাখে যা permanent বা
+                    চিরস্থায়ী হয়। এসব তথ্য reload করার পর ও মুছে যায় না এমন কি browser close করলেও।
+
+                    session & local storage এর তথ্য গুলো cookies মতো server যায় না।
                 </p>
             </div>
         </section>
