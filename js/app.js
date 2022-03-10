@@ -27,6 +27,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
+  // Ternary operator apply for post length issue
   return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -51,7 +52,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
@@ -151,9 +151,12 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  // First text content empty
+  document.getElementById("reported").textContent = "";
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+  reportedPosts.forEach((post) => {
     const div = createPost(post);
+    // Second append
     document.getElementById("reported").appendChild(div);
   });
 };
